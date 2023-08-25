@@ -1,0 +1,61 @@
+:root {
+    /* CSS Variables */
+    --primary-color: #3498db;
+    --hover-color: #e74c3c;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header, footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #ecf0f1, #bdc3c7); /* Gradient Background */
+}
+
+/* Keyframe Animation */
+@keyframes buttonAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.animated-btn {
+    padding: 10px 20px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.animated-btn:hover {
+    background: var(--hover-color);
+    animation: buttonAnimation 1s infinite;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    header, footer {
+        padding: 5px 0;
+    }
+    .animated-btn {
+        padding: 8px 16px;
+    }
+}
